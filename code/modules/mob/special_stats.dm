@@ -194,7 +194,7 @@ proc/get_top_level_mob(mob/S)
 	if(user.special_i <= SPECIAL_MIN_INT_CRAFTING_REQUIREMENT)
 		to_chat(user,  "Your brain is too dumb to craft items.")
 		return FALSE
-	if(drunkenness >= 25)
+	if(drunkenness >= 41)
 		to_chat(user, "You are too drunk to craft items.")
 		return FALSE
 	return TRUE
