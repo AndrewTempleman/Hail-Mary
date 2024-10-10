@@ -310,13 +310,13 @@
 
 /mob/living/proc/treat_message(message)
 
-	if(HAS_TRAIT(src, TRAIT_UNINTELLIGIBLE_SPEECH) && drunkenness <= 10)
+	if(HAS_TRAIT(src, TRAIT_UNINTELLIGIBLE_SPEECH) && drunkenness <= 15)
 		message = unintelligize(message)
 
 	if(derpspeech)
 		message = derpspeech(message, stuttering)
 
-	if(stuttering || HAS_TRAIT(src, TRAIT_SAY_STUTTERING) && drunkenness <= 10)
+	if(stuttering || HAS_TRAIT(src, TRAIT_SAY_STUTTERING) && drunkenness <= 15)
 		message = stutter(message)
 
 	if(slurring)
@@ -328,7 +328,7 @@
 	if(clockcultslurring)
 		message = CLOCK_CULT_SLUR(message)
 
-	if(HAS_TRAIT(src, TRAIT_SAY_LISPING) && drunkenness <= 10)
+	if(HAS_TRAIT(src, TRAIT_SAY_LISPING) && drunkenness <= 15)
 		message = lisp_replace(message)
 
 	var/end_char = copytext(message, length(message), length(message) + 1)
